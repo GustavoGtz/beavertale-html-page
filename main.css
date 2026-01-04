@@ -1,0 +1,266 @@
+/****************************************
+************* CSS STYLESHEET ************
+*****************************************/
+
+:root {
+    --color-primary: #390947;
+    --color-primary-hover: #7b5480;
+    --color-secondary: #a6555f;
+
+    --color-bg-main: #170822;
+    --color-bg-secondary:#210d2b;
+    --color-bg-card: #d9bdc8;
+
+    --color-text-main: #d9bdc8;   /* Dark background */
+    --color-text-inverse: #170822;  /* Light background */
+
+    --color-metal-primary: #26243a; 
+    --color-metal-secondary: #67708b;
+    --color-metal-text-main: #dbe0e7;
+    --color-metal-text-inverse: #141020;
+
+    --color-wood-primary: #46211f;
+    --color-wood-secondary: #945542;
+    --color-wood-text-main: #f0d2af;
+    --color-wood-text-inverse: #1a0606;
+
+    --color-link: #fbdf6b;
+}
+
+/****************************************
+************* DEFAULT STYLES ************
+*****************************************/
+
+body {
+    width: 100%;
+	height: 100%;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+img {
+    width: 200px;
+
+    float: left;
+    margin: 0rem 1rem 1rem 0rem;
+
+    border: 3px solid var(--color-metal-text-main);
+}
+
+/****************************************
+************* CUSTOM STYLES *************
+*****************************************/
+
+/********* layout-40-60 (START) *********/
+.layout-40-60 {
+    width: 80%;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout-40-60 > .left {
+    flex: 0 0 40%;
+}
+
+.layout-40-60 > .right {
+    flex: 0 0 60%;
+}
+/********** layout-40-60 (END) **********/
+
+/********* text-wrapper (START) *********/
+.text-wrapper {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.text-wrapper a {
+    color: var(--color-link);
+}
+
+.text-wrapper a:hover {
+    color: var(--color-secondary);
+}
+/********** text-wrapper (END) **********/
+
+/************ banner (START) ************/
+.banner {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10rem;              
+
+    padding: 20px;
+}
+
+.banner img {
+    margin: 4rem;
+    height: auto;
+    object-fit: cover;
+    border: none;
+}
+/************* banner (END) *************/
+
+/****** table-of-contents (START) *******/
+.table-of-contents {
+    margin: 1rem;
+    padding: 1rem;
+    border: 7px ridge var(--color-wood-primary);
+    background:
+        repeating-linear-gradient(
+        180deg,
+        var(--color-wood-secondary),
+        var(--color-wood-primary) 8px,
+        var(--color-wood-text-main) 8px,
+        var(--color-wood-text-inverse) 16px
+        );
+}
+
+.table-of-contents h2 {
+    margin: 0.5rem 0rem 0.5rem 1rem;
+    color: var(--color-wood-text-inverse);
+    text-shadow: 0px 2px 0px var(--color-metal-text-main);
+    font-weight: 700;
+    font-size: 35px;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.table-of-contents li {
+    margin: 0.5rem 0rem 0.5rem 2rem;
+    color: var(--color-wood-text-main);
+    list-style: square inside;
+}
+
+.table-of-contents a {
+    color: var(--color-metal-text-main);
+}
+
+.table-of-contents a:hover {
+    color: var(--color-primary);
+}
+
+/******** table-of-contents (END) *******/
+
+/****** presentation-card (START) *******/
+.presentation-card {
+    text-align: center;
+    padding: 2rem;
+    border: 7px ridge var(--color-metal-text-inverse);
+
+    background:
+        linear-gradient(
+        180deg,
+        var(--color-metal-text-main) 0%,
+        var(--color-metal-secondary) 25%,
+        var(--color-metal-primary) 50%,
+        var(--color-metal-text-inverse),
+        var(--color-metal-text-inverse) 100%
+    );
+}
+
+.presentation-card h2 {
+    text-shadow: 0px 1px 0px var(--color-metal-text-main);
+    margin: 1rem;
+    color: var(--color-metal-text-inverse);
+    font-weight: 1000;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.presentation-card p {
+    color: var(--color-metal-text-main)
+}
+
+/******** presentation-card (END) *******/
+
+/******** section-wrapper (START) *******/
+.section-wrapper {
+    width: 80%;
+    margin: 1.5rem auto;
+    padding: 1rem 2rem 1rem 2rem;
+
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-main);
+
+    line-height: 1.3;
+
+    display: grid;
+}
+
+.section-wrapper h2 {
+    border: 7px ridge var(--color-wood-primary);
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--color-metal-text-main);
+    text-shadow: 0px 2px 0px var(--color-metal-text-inverse);
+
+    padding: 0.5rem;
+    display: inline-block;
+    
+    background:
+        repeating-linear-gradient(
+        180deg,
+        var(--color-wood-secondary),
+        var(--color-wood-primary) 8px,
+        var(--color-wood-text-main) 8px,
+        var(--color-wood-text-inverse) 16px
+        );
+    text-transform: uppercase;
+}
+
+.section-wrapper .text-wrapper{
+    color: var(--color-metal-text-main);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/********* section-wrapper (END) ********/
+
+/****** subsection-wrapper (START) ******/
+.subsection-wrapper {
+    
+    padding: 1.5rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    
+    line-height: 1.4;
+
+    display: grid;
+}
+
+.subsection-wrapper h3 {
+    padding: 0.5rem;
+    text-shadow: 0px 1px 0px var(--color-metal-text-main);
+    text-align: center;
+    color: var(--color-metal-text-main);
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    border: 7px ridge var(--color-metal-text-inverse);
+    background:
+        linear-gradient(
+        180deg,
+        var(--color-metal-text-main) 0%,
+        var(--color-metal-secondary) 25%,
+        var(--color-metal-primary) 50%,
+        var(--color-metal-text-inverse),
+        var(--color-metal-text-inverse) 100%
+    );
+    display: inline-block;
+}
+
+.subsection-wrapper .text-wrapper{
+    border-left: 3px dashed var(--color-bg-card);
+    color: var(--color-metal-text-main);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/******* subsection-wrapper (END) *******/
