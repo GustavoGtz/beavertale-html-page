@@ -23,8 +23,12 @@
     --color-wood-secondary: #945542;
     --color-wood-text-main: #f0d2af;
     --color-wood-text-inverse: #1a0606;
-
+ 
     --color-link: #fbdf6b;
+
+    --color-blue:  #41f3fc;
+    --color-yellow:#fbdf6b;
+    --color-brown: #c97373;
 }
 
 /****************************************
@@ -51,6 +55,18 @@ img {
 /****************************************
 ************* CUSTOM STYLES *************
 *****************************************/
+
+.blue {
+    color: var(--color-blue);
+}
+
+.yellow {
+    color: var(--color-yellow);
+}
+
+.brown {
+    color: var(--color-brown);
+}
 
 /********* layout-40-60 (START) *********/
 .layout-40-60 {
@@ -84,6 +100,7 @@ img {
 .text-wrapper a:hover {
     color: var(--color-secondary);
 }
+
 /********** text-wrapper (END) **********/
 
 /************ banner (START) ************/
